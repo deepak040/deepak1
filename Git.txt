@@ -1,15 +1,127 @@
-to install git
+//to install git
 
 sudo apt-get install git-all
 
-create account on git
+//create account on git
+
+//to remove run it error
+sudo apt-get purge runit
+
+//repo
+When creating a new project on your local machine using git, you'll first create a new repository (or often, 'repo', for short). 
+
+To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
+
+//create repo 
+$ cd ~/Desktop
+$ mkdir myproject
+$ cd myproject/
+
+//basic commands of Git
+
+//To initialize a git repository in the root of the folder, run the git init command:  
+$ git init
+
+//to crate file
+$ touch mnelson.txt
+
+//file list
+$ ls
+
+//After creating the new file, you can use the git status command to see which files git knows exist.
+$ git status
+
+// to add username and email
+$ git config --global user.email "deepak.soni@ranosys.com"
+$ git config --global user.name "Deepak"
+
+//commit and staging
+
+A commit is a record of what files you have changed since the last time you made a commit. Essentially, you make changes to your repo (for example, adding a file or modifying one) and then tell git to put those files into a commit.
+
+Commits make up the essence of your project and allow you to go back to the state of a project at any point.
+
+So, how do you tell git which files to put into a commit? This is where the staging environment or index come in. As seen in Step 2, when you make changes to your repo, git notices that a file has changed but won't do anything with it (like adding it in a commit).
+
+To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the git add <filename> command (see Step 3 below).
+
+Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command. 
+
+Note: The staging environment, also called 'staging', is the new preferred term for this, but you can also see it referred to as the 'index'.
+
+//Add a file to the staging environment using the git add command. 
+$ git add Git.txt 
+
+//to commit
+$ git commit -m "BangBang"
+
+//Branching
+
+if you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
+
+Branches allow you to move back and forth between 'states' of a project. For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you're done with the page, you can merge your changes from your branch into the master branch. When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files. 
+
+Let's say you are on the master branch and want to create a new branch to develop your web page. Here's what you'll do: Run git checkout -b <my branch name>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the master branch.
+
+After running the above command, you can use the git branch command to confirm that.
+
+//to create new branch and switch to it
+$ git checkout -b deepak2
+
+//to show branch and create branch
+$ git branch
+
+//to push branch online or remote
+$ git push origin my-new-branch
+
+//to revert or remove commit change
+$ git revert commit_id
+
+// to move on master repo
+$ git checkout master
+
+//for commit log
+$ git log
+
+//pull
+
+Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the master branch doesn't exist in the master branch on your local machine.
+
+In order to get the most recent changes that you or others have merged on GitHub, use the git pull origin master command (when working on the master branch).
+
+// for pull repo from from remote
+$ git pull origin master
 
 
-nfjefb	
-NDJKWB
- 
-mnv dxsnavdsdvsbajdvsjadv
-msvdghjsdvshjk
-kjbdjhdbv
-hvhbnd
-dsfef
+// to show diff b/w files
+
+// before commit
+$ git diff
+
+//after commit or in staging env.
+$ git diff --staged
+
+//diff. b/w two commit
+$ git diff commit_id1 commit_id2
+
+
+//for push install heimdal
+
+sudo apt install heimdal-clients
+
+
+//for online link with local repo 
+//create and push 
+
+ …or create a new repository on the command line
+
+echo "# deepak2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/deepak040/deepak2.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/deepak040/deepak2.git
+git push -u origin master
