@@ -110,7 +110,6 @@ $ git diff commit_id1 commit_id2
 
 sudo apt install heimdal-clients
 
-
 //for online link with local repo 
 //create and push 
 
@@ -127,3 +126,5 @@ git push -u origin master
 git remote add origin https://github.com/deepak040/deepak2.git
 git push -u origin master
  
+//url 
+http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
