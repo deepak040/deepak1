@@ -7,4 +7,15 @@ create account on git
 
 nfjefb	
 NDJKWB
- 
+ …or create a new repository on the command line
+
+echo "# deepak2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/deepak040/deepak2.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/deepak040/deepak2.git
+git push -u origin master
