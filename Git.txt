@@ -1,12 +1,79 @@
-to install git
+//to install git
 
 sudo apt-get install git-all
 
-create account on git
+//create account on git
+
+//to remove run it error
+sudo apt-get purge runit
+
+//repo
+When creating a new project on your local machine using git, you'll first create a new repository (or often, 'repo', for short). 
+
+To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
+
+//create repo 
+$ cd ~/Desktop
+$ mkdir myproject
+$ cd myproject/
+
+//basic commands of Git
+
+//To initialize a git repository in the root of the folder, run the git init command:  
+$ git init
+
+//to crate file
+$ touch mnelson.txt
+
+//file list
+$ ls
+
+//After creating the new file, you can use the git status command to see which files git knows exist.
+$ git status
+
+// to add username and email
+$ git config --global user.email "deepak.soni@ranosys.com"
+$ git config --global user.name "Deepak"
+
+//commit and staging
+
+A commit is a record of what files you have changed since the last time you made a commit. Essentially, you make changes to your repo (for example, adding a file or modifying one) and then tell git to put those files into a commit.
+
+Commits make up the essence of your project and allow you to go back to the state of a project at any point.
+
+So, how do you tell git which files to put into a commit? This is where the staging environment or index come in. As seen in Step 2, when you make changes to your repo, git notices that a file has changed but won't do anything with it (like adding it in a commit).
+
+To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the git add <filename> command (see Step 3 below).
+
+Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command. 
+
+Note: The staging environment, also called 'staging', is the new preferred term for this, but you can also see it referred to as the 'index'.
 
 
-nfjefb	
-NDJKWB
+//Add a file to the staging environment using the git add command. 
+$ git add Git.txt 
+
+
+//to commit
+$ git commit -m "BangBang"
+
+$ git checkout -b deepak2
+$ git branch
+$ git remote add origin https://github.com/deepak040/deepak1
+$ git log
+$ git diff
+$ git diff --staged
+
+
+
+//for push install heimdal
+
+sudo apt install heimdal-clients
+
+
+//for online link with local repo 
+//create and push 
+
  …or create a new repository on the command line
 
 echo "# deepak2" >> README.md
