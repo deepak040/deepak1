@@ -1,0 +1,8 @@
+to install git
+
+sudo apt-get install git-all
+
+create account on git
+
+
+
