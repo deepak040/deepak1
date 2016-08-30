@@ -49,21 +49,60 @@ Once you've used the git add command to add all the files you want to the stagin
 
 Note: The staging environment, also called 'staging', is the new preferred term for this, but you can also see it referred to as the 'index'.
 
-
 //Add a file to the staging environment using the git add command. 
 $ git add Git.txt 
-
 
 //to commit
 $ git commit -m "BangBang"
 
+//Branching
+
+if you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where git branches come in. 
+
+Branches allow you to move back and forth between 'states' of a project. For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you're done with the page, you can merge your changes from your branch into the master branch. When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files. 
+
+Let's say you are on the master branch and want to create a new branch to develop your web page. Here's what you'll do: Run git checkout -b <my branch name>. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the master branch.
+
+After running the above command, you can use the git branch command to confirm that.
+
+//to create new branch and switch to it
 $ git checkout -b deepak2
+
+//to show branch and create branch
 $ git branch
-$ git remote add origin https://github.com/deepak040/deepak1
+
+//to push branch online or remote
+$ git push origin my-new-branch
+
+//to revert or remove commit change
+$ git revert commit_id
+
+// to move on master repo
+$ git checkout master
+
+//for commit log
 $ git log
+
+//pull
+
+Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the master branch doesn't exist in the master branch on your local machine.
+
+In order to get the most recent changes that you or others have merged on GitHub, use the git pull origin master command (when working on the master branch).
+
+// for pull repo from from remote
+$ git pull origin master
+
+
+// to show diff b/w files
+
+// before commit
 $ git diff
+
+//after commit or in staging env.
 $ git diff --staged
 
+//diff. b/w two commit
+$ git diff commit_id1 commit_id2
 
 
 //for push install heimdal
