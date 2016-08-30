@@ -104,7 +104,6 @@ $ git diff --staged
 //diff. b/w two commit
 $ git diff commit_id1 commit_id2
 
-
 //for push install heimdal
 
 sudo apt install heimdal-clients
